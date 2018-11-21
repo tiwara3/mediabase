@@ -12,9 +12,6 @@ jobs:
     language: java
     jdk: oraclejdk8
     install: skip
-    before_script:
-    - pwd
-    - chmod a+x gradlew
     script: ./gradlew clean build -x test
     before_deploy:
     - git config --local user.name "Build Bot"
