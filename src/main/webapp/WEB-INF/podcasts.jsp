@@ -62,20 +62,22 @@
     <h1>Moviefun</h1>
 
     <h2>Podcasts in the database</h2>
-    <table width="1000">
-        <tr>
-            <td><b>Title</b></td>
-            <td><b>Description</b></td>
-            <td><b>URL</b></td>
-        </tr>
+    <table class="table table-striped table-bordered">
 
-        <c:forEach items="${requestScope.podcasts}" var="podcast">
+        <thead>
             <tr>
-                <td> ${podcast.title} </td>
-                <td> ${podcast.description} </td>
-                <td> <a href="${podcast.url}">${podcast.url}</a> </td>
+                <td><b>Title</b></td>
+                <td><b>Description</b></td>
             </tr>
-        </c:forEach>
+        </thead>
+        <tbody>
+            <c:forEach items="${requestScope.podcasts}" var="podcast">
+                <tr>
+                    <td><a href="${podcast.url}">${podcast.title}</a></td>
+                    <td> ${podcast.description} </td>
+                </tr>
+            </c:forEach>
+        </tbody>
     </table>
 
 </div>
