@@ -1,8 +1,8 @@
 ---
 applications:
-- name: movie-fun
-  path: build/libs/movie-fun-1.0-SNAPSHOT.war
+- name: moviefun
+  path: build/libs/moviefun-1.0-SNAPSHOT.war
   routes:
-  - route: gf-movie-fun.apps.pcf.paltraining.perficient.com
+  - route: gf-moviefun.apps.pcf.paltraining.perficient.com
   services:
-  - movie-fun-database
+  - media-database
