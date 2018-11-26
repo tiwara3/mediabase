@@ -7,7 +7,7 @@ import java.util.Map;
 
 @Controller
 public class PodcastController {
-    private PodcastRepository podcastRepository;
+    private final PodcastRepository podcastRepository;
 
     public PodcastController(PodcastRepository podcastRepository) {
         this.podcastRepository = podcastRepository;
