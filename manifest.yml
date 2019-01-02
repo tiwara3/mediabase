@@ -1,8 +1,21 @@
 ---
 applications:
+- name: movies-ms
+  path: applications/movies-ms/build/libs/movies-ms-1.0-SNAPSHOT.jar
+  routes:
+  - route: <initials>-movies-ms.apps.pcf.paltraining.perficient.com
+  services:
+  - movies-ms-database
+- name: podcasts-ms
+  path: applications/podcasts-ms/build/libs/podcasts-ms-1.0-SNAPSHOT.jar
+  routes:
+    - route: <initials>-podcasts-ms.apps.pcf.paltraining.perficient.com
+  services:
+  - podcasts-ms-database
 - name: moviefun
   path: applications/moviefun/build/libs/moviefun-1.0-SNAPSHOT.war
   routes:
   - route: <initials>-moviefun.apps.pcf.paltraining.perficient.com
-  services:
-  - media-database
+  env:
+    MOVIES_MS_URL: http://<initials>-movies-ms.apps.pcf.paltraining.perficient.com/movies
+    PODCASTS_MS_URL: http://<initials>-podcasts-ms.apps.pcf.paltraining.perficient.com/podcasts

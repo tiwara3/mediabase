@@ -1,22 +1,31 @@
 package org.superbiz.moviefun.podcasts;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
-@Controller
+@RestController
+@RequestMapping("/podcasts")
 public class PodcastController {
-    private final PodcastRepository podcastRepository;
+    private PodcastRepository podcastRepository;
 
     public PodcastController(PodcastRepository podcastRepository) {
         this.podcastRepository = podcastRepository;
     }
 
-    @GetMapping("/podcasts")
-    public String allPodcasts(Map<String, Object> model) {
-        model.put("podcasts", podcastRepository.findAll() );
-        return "podcasts";
+    @PostMapping
+    public ResponseEntity<Podcast> create(@RequestBody Podcast podcast) {
+        podcastRepository.save(podcast);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
+    @GetMapping
+    public List<Podcast> getAll() {
+        List<Podcast> podcasts = new ArrayList<>();
+        podcastRepository.findAll().forEach(podcasts::add);
+        return podcasts;
+    }
 }
