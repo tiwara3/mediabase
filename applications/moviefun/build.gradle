@@ -10,12 +10,12 @@ description 'Moviefun Application'
 
 dependencyManagement {
     imports {
-        mavenBom "io.pivotal.spring.cloud:spring-cloud-services-dependencies:$SCSClientStartersVersion"
+        mavenBom("io.pivotal.spring.cloud:spring-cloud-services-dependencies:$SCSClientStartersVersion")
     }
 }
 
 dependencies {
-    compile project(":components:ui")
+    compile project(':components:ui')
 
     compile('taglibs:standard:1.1.2')
     compile('javax.servlet:jstl:1.2')
@@ -24,6 +24,7 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.springframework.boot:spring-boot-starter-tomcat')
     compile('io.pivotal.spring.cloud:spring-cloud-services-starter-service-registry')
-    
+    compile('io.pivotal.spring.cloud:spring-cloud-services-starter-circuit-breaker')
+   
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

@@ -9,12 +9,12 @@ description 'Movies Microservice'
 
 dependencyManagement {
     imports {
-        mavenBom "io.pivotal.spring.cloud:spring-cloud-services-dependencies:$SCSClientStartersVersion"
+        mavenBom("io.pivotal.spring.cloud:spring-cloud-services-dependencies:$SCSClientStartersVersion")
     }
 }
 
 dependencies {
-    compile project(":components:movies")
+    compile project(':components:movies')
     
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
     compile('org.springframework.boot:spring-boot-starter-web')
