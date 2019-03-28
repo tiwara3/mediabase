@@ -4,8 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.superbiz.moviefun.moviesui.MovieClient;
 import org.superbiz.moviefun.moviesui.MoviesInitialList;
-import org.superbiz.moviefun.podcastsUI.PodcastClient;
-import org.superbiz.moviefun.podcastsUI.PodcastsInitialList;
+import org.superbiz.moviefun.podcastsui.PodcastClient;
+import org.superbiz.moviefun.podcastsui.PodcastsInitialList;
 
 import java.util.Map;
 

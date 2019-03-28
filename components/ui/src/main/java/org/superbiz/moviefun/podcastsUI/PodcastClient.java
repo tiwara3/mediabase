@@ -1,4 +1,4 @@
-package org.superbiz.moviefun.podcastsUI;
+package org.superbiz.moviefun.podcastsui;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.slf4j.Logger;

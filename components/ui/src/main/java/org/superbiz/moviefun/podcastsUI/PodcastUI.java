@@ -1,4 +1,4 @@
-package org.superbiz.moviefun.podcastsUI;
+package org.superbiz.moviefun.podcastsui;
 
 import java.util.Objects;
 

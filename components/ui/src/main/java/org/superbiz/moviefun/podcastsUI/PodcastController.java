@@ -1,4 +1,4 @@
-package org.superbiz.moviefun.podcastsUI;
+package org.superbiz.moviefun.podcastsui;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
