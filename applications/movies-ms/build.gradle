@@ -9,7 +9,8 @@ description 'Movies Microservice'
 
 dependencyManagement {
     imports {
-        mavenBom "io.pivotal.spring.cloud:spring-cloud-services-dependencies:$SCSClientStartersVersion"
+        mavenBom("org.springframework.cloud:spring-cloud-dependencies:$SCVersion")
+        mavenBom("io.pivotal.spring.cloud:spring-cloud-services-dependencies:$SCSClientStartersVersion")
     }
 }
 

@@ -10,6 +10,7 @@ description 'Moviefun Application'
 
 dependencyManagement {
     imports {
+        mavenBom("org.springframework.cloud:spring-cloud-dependencies:$SCVersion")
         mavenBom "io.pivotal.spring.cloud:spring-cloud-services-dependencies:$SCSClientStartersVersion"
     }
 }
